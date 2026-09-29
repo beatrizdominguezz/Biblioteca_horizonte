@@ -35,74 +35,114 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <section class="contenedor_principal">
-                <div class="barra_generos_libros">
-                    <div class="tarjeta_genero_literario">
-                        <img src="static/images/libro.png" alt="novelas" class="imagen_genero_literario">
-                        <p>Novelas</p>
+        <main class="contenedor">
+        <nav>
+            <div class="contenedor_1">
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">📖</span>
+                    <p>Novelas</p>
+                </div>
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">🧪</span>
+                    <p>Ciencia</p>
+                </div>
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">🏛️</span>
+                    <p>Historia</p>
+                </div>
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">💻</span>
+                    <p>Tecnología</p>
+                </div>
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">🎨</span>
+                    <p>Arte</p>
+                </div>
+                <div class="tarjeta">
+                    <span style="font-size: 2rem;">🧸</span>
+                    <p>Infantil</p>
+                </div>
+            </div>
+        </nav>
+
+        <section class="seccion-principal">
+
+            <!-- Columna Izquierda (Banner y Video) -->
+            <div class="contenedor_2">
+                <div class="texto-banner">
+                    <div>
+                        <div class="separacion_titulo">
+                            <h2>Descubre nuevas historias</h2>
+                        </div>
+                        <div class="linea_azul"></div>
                     </div>
-                    <div class="tarjeta_genero_literario">
-                        <img src="" alt="">
-                        <p>Ciencia</p>
-                    </div>
-                    <div class="tarjeta_genero_literario">
-                        <img src="" alt="">
-                        <p>Historia</p>
-                    </div>
-                    <div class="tarjeta_genero_literario">
-                        <img src="" alt="">
-                        <p>Tecnología</p>
-                    </div>
-                    <div class="tarjeta_genero_literario">
-                        <img src="" alt="">
-                        <p>Arte</p>
-                    </div>
-                    <div class="tarjeta_genero_literario">
-                        <img src="" alt="">
-                        <p>Infantil</p>
+                    <p>Explora nuestra biblioteca virtual y encuentra libros para todos los gustos.
+                        Conocimiento, aventura y mucho más al alcance de un clic.
+                    </p>
+                </div>
+
+                <div class="tarjeta-video">
+                    <div class="contenedor-video">
+                        <video controls preload="auto" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+                            <source src="static/videos/videoxd.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <p>Conoce la Biblioteca Horizonte</p>
+                        </div>
                     </div>
                 </div>
-                <section class="contenedor1">
-                    <div class="caja1">
-                        <div class="column_caja1">
-                            <div>
-                                <h4>Descubre nuevas historias</h4>
-                            </div>
-                            <div class="raya_azul"></div>
-                            <div>
-                                <p>Explora nuestra biblioteca virtual y encuentra libros para todos
-                                    los gustos. Conocimiento, aventura y mucho más al alcance de un clic.
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <iframe src="" frameborder="0"></iframe>
-                            <p>Conoce la biblioteca horizonte</p>
-                        </div>
-                    </div>
-                    <div class="contenedor2">
-                        <div class="caja2">
-                            <div class="titulo_recomendaciones">
-                                <h4>Libros recomendados:</h4>
-                            </div>
-                            <div class="targeta_libros_recomendados">
-                                <div class="cuadrado"></div>
-                                <div>
-                                    <p class="letra_negrita">Cien años de soledad</p>
-                                    <p>Gabriel García Márquez</p>
-                                </div>
-                                <div>
-                                    <a href="#">Ver más...</a>
-                                    <div class="circulo_mas"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-            </section>
-        </main>
+            </div> 
 
-    </body>
-    </html>
+            
+            <section class="recomendados">
+                <h3>Libros recomendados:</h3>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/flautas.jpg" alt="Cien años de soledad">
+                    <div class="column_recomendado1">
+                        <div class="column_recomendado2">
+                            <p class="letra_negrita">Cien años de soledad</p>
+                            <p class="letra_gris">Gabriel García Márquez</p>
+                        </div>
+                        <div class="row_recomendado">
+                            <a href="#">Ver más...</a>
+                            <button class="btn-sumar">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/flautas.jpg" alt="Sapiens">
+                    <div class="column_recomendado1">
+                        <div class="column_recomendado2">
+                            <p class="letra_negrita">Sapiens</p>
+                            <p class="letra_gris">Yuval Noah Harari</p>
+                        </div>
+                        <div class="row_recomendado">
+                            <a href="#">Ver más...</a>
+                            <button class="btn-sumar">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/flautas.jpg" alt="El principito">
+                    <div class="column_recomendado1">
+                        <div class="column_recomendado2">
+                            <p class="letra_negrita">El principito</p>
+                            <p class="letra_gris">Antoine de Saint-Exupéry</p>
+                        </div>
+                        <div class="row_recomendado">
+                            <a href="#">Ver más...</a>
+                            <button class="btn-sumar">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
