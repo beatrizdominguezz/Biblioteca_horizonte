@@ -1,47 +1,48 @@
 console.log(`Conexión exitosa con js...`);
 
-    const botonIngresar = document.querySelector('.boton_ingresar');
-    const campoEmail = document.querySelector('.email_introducir');
-    const elementoContador = document.getElementById('numero_libros');
-    const listaBotonesSumar = document.querySelectorAll('.btn-sumar');
-    const etiquetaVideo = document.querySelector('.contenedor-video video');
+const botonIngresar = document.querySelector('.boton_ingresar');
+const campoEmail = document.querySelector('.email_introducir');
+const elementoContador = document.getElementById('numero_libros');
+const listaBotonesSumar = document.querySelectorAll('.btn-sumar');
+const imagenBanner = document.querySelector('.imagen-banner');
 
-    let totalLibros = 0;
-    let rutaVideoOriginal = 'static/videos/videoxd.mp4';
-    let rutaVideoAlternativo = 'static/videos/video_alternativo.mp4';
+let totalLibros = 0;
+let rutaImagenOriginal = 'static/images/libro1.jpg';
+let rutaImagenAlternativa = 'static/images/libro2.jpg';
 
-    function procesarIngreso() {
-        let correoUsuario = campoEmail.value;
+function procesarIngreso() {
+    let correoUsuario = campoEmail.value;
 
-        if (correoUsuario !== '') {
-            alert('Bienvenido\n' + correoUsuario);
-            campoEmail.value = ''; 
-        } else {
-            alert('Por favor, ingresa tu correo electrónico.');
-        }
+    if (correoUsuario !== '') {
+        alert('Bienvenido\n' + correoUsuario);
+        campoEmail.value = ''; 
+    } else {
+        alert('Por favor, ingresa tu correo electrónico.');
     }
+}
 
-    function sumarLibro() {
-        totalLibros = totalLibros + 1;
-        elementoContador.textContent = totalLibros;
-    }
+function sumarLibro() {
+    totalLibros = totalLibros + 1;
+    elementoContador.textContent = totalLibros;
+}
 
-    function cambiarMiniatura() {
-        etiquetaVideo.src = rutaVideoAlternativo;
-    }
+function cambiarImagen() {
+    imagenBanner.src = rutaImagenAlternativa;
+}
 
-    function restaurarMiniatura() {
-        etiquetaVideo.src = rutaVideoOriginal;
-    }
+function restaurarImagen() {
+    imagenBanner.src = rutaImagenOriginal;
+}
 
-    botonIngresar.addEventListener('click', procesarIngreso);
+botonIngresar.addEventListener('click', procesarIngreso);
 
-    for (let i = 0; i < listaBotonesSumar.length; i++) {
-        let botonActual = listaBotonesSumar[i];
-        botonActual.addEventListener('click', sumarLibro);
-    }
+for (let i = 0; i < listaBotonesSumar.length; i++) {
+    let botonActual = listaBotonesSumar[i];
+    botonActual.addEventListener('click', sumarLibro);
+}
 
-    if (etiquetaVideo) {
-        etiquetaVideo.addEventListener('mouseenter', cambiarMiniatura);
-        etiquetaVideo.addEventListener('mouseleave', restaurarMiniatura);
-    }
+
+if (imagenBanner) {
+    imagenBanner.addEventListener('mouseenter', cambiarImagen);
+    imagenBanner.addEventListener('mouseleave', restaurarImagen);
+}
